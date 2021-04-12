@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200;1,300&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>Classic Shop</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="socialNcart">
+                <div id="socials">                
+                    <i :class='social' v-for="social in socials"></i>
+                </div>
+                <div id="cart">
+                    <div v-for="(button, index) in cart">
+                        <i :class="(index == 2) ? 'fas fa-shopping-cart' : null"></i>
+                        {{button}}
+                        <i :class="(index == 1) || (index == 2) ? 'fas fa-chevron-down' : null"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="logoNstuff">
+                <div id="logo">
+                    <img :src="logo" alt="logo">
+                </div>
+                <div class="stuff">
+                    <div class="nav">
+                        <ul>
+                            <li v-for='(n, i) in nav'>
+                                {{n}}
+                                <i style="font-size: 13px; margin-left: 5px;" :class="(i == 4) ? null : 'fas fa-chevron-down'"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stuff_button">
+                        <button>SHOP NOW!</button>
+                        <i class="fas fa-search"></i>                    
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main></main>    
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
