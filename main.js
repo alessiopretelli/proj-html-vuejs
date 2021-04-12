@@ -4,7 +4,7 @@ var app = new Vue({
         socials: ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-instagram', 'fab fa-youtube'],
         cart: ['Shopping Cart', 'My Account', 'CART'],
         logo: "img/classic_shop_logo2x.png",
-        nav: ['Home', 'Shop', 'Products', 'Categories', 'News', 'Elements']
+        nav: ['Home', 'Shop', 'Products', 'Categories', 'News', 'Elements'],
     }
 });
 
@@ -22,5 +22,4 @@ function myFunction() {
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("logoNstuff");
-
 var sticky = header.offsetTop;
