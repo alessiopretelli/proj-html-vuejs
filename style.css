@@ -33,7 +33,7 @@ header {
 
 .socialNcart #cart div {
     cursor: pointer;
-    font-size: 15px;
+    font-size: 13px;
     height: 100%;
     padding: 15px 10px;
     display: inline-block;
@@ -51,8 +51,6 @@ header {
     background-color: #f5f5f5;
     text-align: center;
     width: 200px;
-    font-size: 13px;
-    border-bottom: 2px solid lightgrey;
 }
 .socialNcart #cart div:last-child i {
     font-size: 13px;
@@ -253,11 +251,12 @@ header {
     margin: 0 10px;
 }
 .f_p_card h4 {
+    font-size: 15px;
     font-weight: 800;
 }
 .f_p_card p {
     margin: 5px 0px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .inline_block {
@@ -267,7 +266,7 @@ header {
     color: #427ed5;
 }
 .line_through {
-    font-size: 13px;
+    font-size: 10px;
     text-decoration: line-through;
 }
 
@@ -277,10 +276,10 @@ header {
     top: 0;
     z-index: 2;
     width: 100%;
-    height: 77%;
+    height: 78%;
 }
 .f_p_card:hover .f_p_img_card {
-    background: linear-gradient(blue, pink);
+    background: linear-gradient(#427ed5, #db80b3);
     opacity: 0.8;
 }
 .f_p_card:hover .f_p_img_card .circle {
@@ -307,7 +306,7 @@ header {
 
 /* collections */ 
 .collections {
-    margin-top: 150px;
+    margin-top: 100px;
     width: 100%;
     display: flex;
 }
@@ -414,7 +413,7 @@ header {
     font-size: 10px;
 }
 .f_p_img_card_two:hover {
-    background: linear-gradient(blue, pink);
+    background: linear-gradient(#427ed5, #db80b3);
     opacity: 0.8;
 }
 .f_p_img_card_two:hover .f_p_img_card_two_info {
@@ -444,7 +443,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 75px 0;
+    margin: 75px 0 50px 0;
     width: 100%;
     height: 400px;
 }
@@ -468,11 +467,11 @@ header {
     color: white;
     position: absolute;
     text-align: start;
-    padding: 0 20%;
+    padding: 0 15%;
     z-index: 1;
     width: 100%;
-    height: 70%;
-    top: 30%;
+    height: 75%;
+    top: 25%;
 }
 .info_i_dNs h2 {
     font-weight: 700;
@@ -495,4 +494,133 @@ header {
 }
 .f_p_card_two.less_size img {
     width: 80%;
+}
+
+/* testimonial */
+.testimonial {
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    padding: 5% 30%;
+    height: 400px;
+    /* sfondo mancante, ho aggiunto questa immagine per attinenza al progetto*/
+    background-image: url('img/home1_slide_one_bg.jpg');
+}
+.testimonial img {
+    width: 10%;
+}
+.testimonial p {
+    color: #ffffff;
+    margin: 10px 0;
+}
+.testimonial i {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 10px;
+    color: white;
+}
+
+/* blog */
+.blog {
+    position: relative;
+}
+.blog_hr {
+    position: absolute;
+    bottom: 0;
+    right: 2.5%;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    height: 2px;
+    width: 95%;
+}
+
+.news_section {
+    margin-top: 30px;
+    width: 100%;
+    height: 450px;
+    padding: 0 15%;
+    display: flex;
+    justify-content: center;
+}
+.news {
+    width: 30%;
+    margin: 0 20px;
+}
+.news img {
+    width: 100%;
+}
+.news h3 {
+    margin: 10px 0;
+}
+.news p {
+    color: rgb(167, 167, 167);
+    margin: 10px 0;
+}
+.news label {
+    color: rgb(167, 167, 167);
+    font-size: 13px;
+}
+.news label:first-of-type {
+    padding-right: 5px;
+    border-right: 1px solid lightgray;
+}
+
+/* products */
+.products {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.products div h3 {
+    text-transform: uppercase;
+    margin: 20px 20px;
+}
+.products li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 10px 0;
+    list-style: none;
+    border-bottom: 1px solid lightgray;
+}
+.products li p {
+    margin-bottom: 5px;
+}
+.products li img {
+    width: 30%;
+}
+.products_info i {
+    color: #427ed5;
+    font-size: 13px;
+}
+.products_info .vote {
+    margin-bottom: 5px;
+}
+
+.p_latest_reviews {
+    margin-top: 5px; 
+    font-size: 13px;
+}
+
+/* brand logos */
+.brand_logos {
+    text-align: center;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 250px;
+    padding: 50px 0;
+}
+.brand_logos h4 {
+    text-transform: uppercase;
+}
+
+.logos {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.logos img {
+    margin: 0 40px;
 }
