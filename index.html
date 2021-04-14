@@ -35,9 +35,9 @@
                 <div class="stuff">
                     <div class="nav">
                         <ul>
-                            <li v-for='(n, i) in nav'>
+                            <li v-for='n in nav'>
                                 {{n}}
-                                <i style="font-size: 13px; margin-left: 5px;" :class="(i == 4) ? null : 'fas fa-chevron-down'"></i>
+                                <i style="font-size: 13px; margin-left: 5px;" :class="(n == 'News') ? null : 'fas fa-chevron-down'"></i>
                             </li>
                         </ul>
                     </div>
@@ -642,48 +642,19 @@
                 <div class="top_rated">
                     <h5>top rated products</h5>
                     <ul>
-                        <li>
+                        <li v-for="product in top_rated">
                             <div class="products_info">
-                                <p>Leather Gloves</p>
+                                <p>{{product.name}}</p>
                                 <div class="vote">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>    
+                                    <i class="fas fa-star" v-for="star in product.vote"></i>
                                 </div>
-                                <strong>$45</strong>
-                            </div>
-                            <img src="img/leather_gloves-120x156.jpg" alt="">
-                        </li>
-                        <li>
-                            <div class="products_info">
-                                <p>Black Leather Jacket</p>
-                                <div class="vote">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>    
+                                <div v-if="product.cost.length == 2" class="cost_variation">
+                                    <label style="text-decoration: line-through; font-size: 10px; font-weight: 600;">{{product.cost[0]}}</label>
+                                    <label style="font-weight: 600; font-size: 13px; text-decoration: underline;">{{product.cost[1]}}</label>    
                                 </div>
-                                <label style="text-decoration: line-through; font-size: 10px; font-weight: 600;">$235</label>
-                                <label style="font-weight: 600; font-size: 13px; text-decoration: underline;">$200</label>
+                                <strong v-else>{{product.cost}}</strong>
                             </div>
-                            <img src="img/black_elegant_leather_jacket-120x156.jpg" alt="">
-                        </li>
-                        <li>
-                            <div class="products_info">
-                                <p>Spring Printed Dress</p>
-                                <div class="vote">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>    
-                                </div>
-                                <strong>$47</strong>
-                            </div>
-                            <img src="img/spring_printed_dress-120x156.jpg" alt="">
+                            <img :src="product.img" alt="">
                         </li>
                     </ul>
                 </div>
@@ -704,10 +675,7 @@
             <div class="footer_bottom">
                 <div class="copyrights">
                     <ul>
-                        <li>©Copyright 2012-2020</li>
-                        <li>Avada Theme by Theme Fusion</li>
-                        <li>All Rights Reserved</li>
-                        <li>Powered by WordPress</li>
+                        <li v-for="element in copyright_elements">{{element}}</li>
                     </ul>
                 </div>
                 <div class="payments">

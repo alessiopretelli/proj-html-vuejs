@@ -11,6 +11,26 @@ var app = new Vue({
           Email: 'info@company.com',
           Web: 'Theme-fusion.com'
         }, 
+        top_rated : [
+          {
+            name: 'Leather Gloves',
+            img: 'img/leather_gloves-120x156.jpg',
+            cost: '$45',
+            vote: 5
+          },
+          {
+            name: 'Black Leather Jacket',
+            img: 'img/black_elegant_leather_jacket-120x156.jpg',
+            cost: ['$235', '$200'],
+            vote: 5
+          },
+          {
+            name: 'Spring Printed Dress',
+            img: 'img/spring_printed_dress-120x156.jpg',
+            cost: '$47',
+            vote: 5
+          }
+        ],
         recent_posts: [
           'Aenean lobortis spaien enim viverra',
           'Duis ac massa semper maximus',
@@ -42,6 +62,7 @@ var app = new Vue({
               'White',
               'winter'
         ],
+        copyright_elements: ['©Copyright 2012-2020', 'Avada Theme by Theme Fusion', 'All Rights Reserved', 'Powered by WordPress'],
         cardsimg: ['img/visa.png', 'img/mastercard.png', 'img/PP_Acceptance_Marks_for_LogoCenter_266x142.png', 'img/Discover-logo.jpg', 'img/amazon-pay.png']
     }
 });
