@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200;1,300&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -29,7 +30,7 @@
             </div>
             <div id="logoNstuff">
                 <div id="logo">
-                    <img :src="logo" alt="logo">
+                    <img :src="logo[0]" alt="logo">
                 </div>
                 <div class="stuff">
                     <div class="nav">
@@ -464,7 +465,7 @@
                                     <i class="fas fa-star"></i>    
                                 </div>
                                 <label style="text-decoration: line-through; font-size: 13px; font-weight: 600;">$235</label>
-                                <label style="font-weight: 600;">$200</label>
+                                <label style="font-weight: 600; text-decoration: underline;">$200</label>
                             </div>
                             <img src="img/black_elegant_leather_jacket-120x156.jpg" alt="">
                         </li>
@@ -490,23 +491,23 @@
                                     <i class="fas fa-star"></i>    
                                 </div>
                                 <label style="text-decoration: line-through; font-size: 13px; font-weight: 600;">$235</label>
-                                <label style="font-weight: 600;">$200</label>
+                                <label style="font-weight: 600; text-decoration: underline;">$200</label>
                             </div>
                             <img src="img/black_elegant_leather_jacket-120x156.jpg" alt="">
                         </li>
                         <li>
                             <div class="products_info">
                                 <p>Blue Leather Jacket <strong style="text-decoration: line-through;">$80</strong></p>
-                                <strong>$60</strong>
+                                <strong style="text-decoration: underline;">$60</strong>
                             </div>
                             <img src="img/blue_leather_jacket-120x156.jpg" alt="">
                         </li>
                         <li>
                             <div class="products_info">
                                 <p>Modern Leather Boots <strong style="text-decoration: line-through;">$50</strong></p>
-                                <strong>$30</strong>
+                                <strong style="text-decoration: underline;">$30</strong>
                             </div>
-                            <img style="width: 20%; margin-right: 10px;" src="img/modern_leather_boots-120x156.jpg" alt="">
+                            <img src="img/modern_leather_boots-120x156.jpg" alt="">
                         </li>
                     </ul>
                 </div>
@@ -538,7 +539,7 @@
                                     <i class="fas fa-star"></i>    
                                 </div>
                                 <label style="text-decoration: line-through; font-size: 13px; font-weight: 600;">$235</label>
-                                <label style="font-weight: 600;">$200</label>
+                                <label style="font-weight: 600; text-decoration: underline;">$200</label>
                             </div>
                             <img src="img/black_elegant_leather_jacket-120x156.jpg" alt="">
                         </li>
@@ -616,7 +617,117 @@
                     <img src="img/b_logotype_3.png" alt="">
                 </div>
             </div>
-        </main>    
+        </main>
+        <footer>
+            <div class="subscribe">
+                <div class="subscribe_stuff">
+                    <i class="far fa-envelope"></i>
+                    <h2>Subscrive now and get special offers</h2>    
+                </div>
+                <div class="subscribe_form">
+                    <input placeholder="Insert your e-mail" type="text">
+                    <button class="button_one">Send</button>
+                </div>
+            </div>
+            <div class="footer_center">
+                <div class="company_infos">
+                    <img :src="logo[1]" alt="">
+                    <p v-for="(info, name) in infos">
+                        {{name}}: {{info}}
+                    </p>
+                    <div id="socials_footer">                
+                        <i :class='social' v-for="social in socials"></i>
+                    </div>    
+                </div>
+                <div class="top_rated">
+                    <h5>top rated products</h5>
+                    <ul>
+                        <li>
+                            <div class="products_info">
+                                <p>Leather Gloves</p>
+                                <div class="vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>    
+                                </div>
+                                <strong>$45</strong>
+                            </div>
+                            <img src="img/leather_gloves-120x156.jpg" alt="">
+                        </li>
+                        <li>
+                            <div class="products_info">
+                                <p>Black Leather Jacket</p>
+                                <div class="vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>    
+                                </div>
+                                <label style="text-decoration: line-through; font-size: 10px; font-weight: 600;">$235</label>
+                                <label style="font-weight: 600; font-size: 13px; text-decoration: underline;">$200</label>
+                            </div>
+                            <img src="img/black_elegant_leather_jacket-120x156.jpg" alt="">
+                        </li>
+                        <li>
+                            <div class="products_info">
+                                <p>Spring Printed Dress</p>
+                                <div class="vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>    
+                                </div>
+                                <strong>$47</strong>
+                            </div>
+                            <img src="img/spring_printed_dress-120x156.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="recent_posts">
+                    <h5>recent posts</h5>
+                    <ul>
+                        <li v-for="post in recent_posts">
+                            <i class="fas fa-chevron-right"></i>
+                            {{post}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_tags">
+                    <h5>tags</h5>
+                    <button v-for="tag in tags">{{tag}}</button>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="copyrights">
+                    <ul>
+                        <li>©Copyright 2012-2020</li>
+                        <li>Avada Theme by Theme Fusion</li>
+                        <li>All Rights Reserved</li>
+                        <li>Powered by WordPress</li>
+                    </ul>
+                </div>
+                <div class="payments">
+                    <img :src="card" v-for='card in cardsimg' alt="">
+                </div>
+            </div>
+        </footer>
+        <div class="fixed_stuff">
+            <div class="demos">
+                <i class="fab fa-atlassian"></i>                
+                <p>Demos</p>
+            </div>
+            <div class="sales">
+                <div class="price">
+                    <p>$</p>
+                    <p>39</p>    
+                </div>
+                <p id="sale">On Sale</p>
+            </div>
+        </div>    
     </div>
 
 
