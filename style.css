@@ -453,7 +453,7 @@ header {
     width: 45%;
 }
 .discounts img {
-    width: 80%;
+    width: 85%;
 }
 .shipping {
     position: relative;
@@ -461,7 +461,7 @@ header {
     width: 45%;
 }
 .shipping img {
-    width: 80%;
+    width: 85%;
 }
 .info_i_dNs {
     color: white;
@@ -554,12 +554,12 @@ header {
 }
 .news p {
     color: #a0a5a5;
-    font-size: 14px;
+    font-size: 15px;
     margin: 10px 0;
 }
 .news label {
     color: #a0a5a5;
-    font-size: 13px;
+    font-size: 11px;
 }
 .news label:first-of-type {
     padding-right: 5px;
@@ -779,7 +779,7 @@ header {
     cursor: pointer;
     border-radius: 5px;
     margin: 0 5px;
-    width: 50px;
+    width: 45px;
     height: 30px;
 }
 
